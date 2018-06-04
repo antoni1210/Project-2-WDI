@@ -1,6 +1,6 @@
 const Record = require('../models/record.js');
 
-function recordsIndex(req, res){
+function indexRoute(req, res){
   Record
     .find()
     .populate('creator')
@@ -10,7 +10,7 @@ function recordsIndex(req, res){
     });
 }
 
-function recordsShow(req, res){
+function showRoute(req, res){
   Record
     .findById(req.params.id)
     .populate('comments')
@@ -20,12 +20,12 @@ function recordsShow(req, res){
     });
 }
 
-function recordsNew(req, res){
+function newRoute(req, res){
   if(!res.locals.isLoggedIn) return res.redirect('/');
   res.render('records/new');
 }
 
-function recordsCreate(req, res){
+function createRoute(req, res){
   const recordData = req.body;
   recordData['creator'] = res.locals.user.id;
   Record
@@ -35,7 +35,7 @@ function recordsCreate(req, res){
     });
 }
 
-function recordsEdit(req, res){
+function editRoute(req, res){
   Record
     .findById(req.params.id)
     .exec()
@@ -44,7 +44,7 @@ function recordsEdit(req, res){
     });
 }
 
-function recordsUpdate(req, res){
+function updateRoute(req, res){
   Record
     .findById(req.params.id)
     .exec()
@@ -55,7 +55,7 @@ function recordsUpdate(req, res){
   return res.redirect(`/records/${req.params.id}`);
 }
 
-function recordsDelete(req, res){
+function deleteRoute(req, res){
   Record
     .findById(req.params.id)
     .exec()
@@ -65,7 +65,7 @@ function recordsDelete(req, res){
     });
 }
 
-function createComment(req, res){
+function createCommentRoute(req, res){
   Record
     .findById(req.params.id)
     .exec()
@@ -77,12 +77,12 @@ function createComment(req, res){
 
 
 module.exports = {
-  index: recordsIndex,
-  show: recordsShow,
-  new: recordsNew,
-  create: recordsCreate,
-  edit: recordsEdit,
-  update: recordsUpdate,
-  delete: recordsDelete,
-  comment: createComment
+  index: indexRoute,
+  show: showRoute,
+  new: newRoute,
+  create: createRoute,
+  edit: editRoute,
+  update: updateRoute,
+  delete: deleteRoute,
+  comment: createCommentRoute
 };
