@@ -1,28 +1,33 @@
-const Record = require('../models/record');
+const Record = require('../models/record.js');
 
 function recordsIndex(req, res){
   Record
     .find()
+    .populate('creator')
     .exec()
     .then(records => {
-      res.render('records/index',{
-        title: 'All Records',
-        records
-      });
+      res.render('records/index', {records});
     });
 }
+
 function recordsShow(req, res){
   Record
     .findById(req.params.id)
+    .populate('comments')
     .exec()
     .then(record => {
       res.render('records/show', {record});
     });
 }
+
 function recordsNew(req, res){
+  if(!res.locals.isLoggedIn) return res.redirect('/');
   res.render('records/new');
 }
+
 function recordsCreate(req, res){
+  const recordData = req.body;
+  recordData['creator'] = res.locals.user.id;
   Record
     .create(req.body)
     .then((record)=>{
@@ -60,6 +65,17 @@ function recordsDelete(req, res){
     });
 }
 
+function createComment(req, res){
+  Record
+    .findById(req.params.id)
+    .exec()
+    .then( record =>{
+      record.comments.create(req.body);
+      return res.redirect(`/records/${record.id}`);
+    });
+}
+
+
 module.exports = {
   index: recordsIndex,
   show: recordsShow,
@@ -67,5 +83,6 @@ module.exports = {
   create: recordsCreate,
   edit: recordsEdit,
   update: recordsUpdate,
-  delete: recordsDelete
+  delete: recordsDelete,
+  comment: createComment
 };
