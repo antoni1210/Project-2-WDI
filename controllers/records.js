@@ -6,7 +6,10 @@ function indexRoute(req, res){
     .populate('creator')
     .exec()
     .then(records => {
-      res.render('records/index', {records});
+      res.render('records/index', {
+        title: 'All Records',
+        records
+      });
     });
 }
 
@@ -69,10 +72,11 @@ function createCommentRoute(req, res){
   Record
     .findById(req.params.id)
     .exec()
-    .then( record =>{
-      record.comments.create(req.body);
-      return res.redirect(`/records/${record.id}`);
-    });
+    .then((record) =>{
+      record.comments.push(req.body);
+      return record.save();
+    })
+    .then((record) => res.redirect(`/records/${record._id}`));
 }
 
 

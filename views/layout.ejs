@@ -11,22 +11,9 @@
 </head>
 <body>
 
-  <% include ./partials/_navbar %>
+<% include ./partials/_navbar %>
 
-  <% if(locals.isHomepage) { %>
-    <section class="hero is-medium is-dark is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <%- body %>
-        </div>
-      </div>
-    </section>
-    <% } else { %>
-      <section class="section">
-        <div class="container">
-          <%- body %>
-        </div>
-      </section>
-      <% } %>
-    </body>
-    </html>
+    <%- body %>
+  </main>
+</body>
+</html>

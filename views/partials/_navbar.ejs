@@ -7,15 +7,20 @@
     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
     </a>
   </div>
-
+  <% if(locals.isLoggedIn){%>
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-end">
-      <a href="/records" class="navbar-item">
-        All Records
-      </a>
-      <a href="/records/new" class="navbar-item">
-        New Record
-      </a>
+      <p>Hi <%= locals.user.username %></p>
+      <a href="/records" class="navbar-item">All Records</a>
+      <a href="/records/new" class="navbar-item">New Record</a>
+      <a href="/logout" class="navbar-item">Logout</a>
     </div>
-  </div>
+  <%} else {%>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        <a href="/records" class="navbar-item">All Records</a>
+        <a href="/login" class="navbar-item">Login</a>
+        <a href="/register" class="navbar-item">Sign Up</a>
+    </div>
+  <% } %>
 </nav>

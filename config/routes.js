@@ -5,9 +5,9 @@ const registrations      = require('../controllers/registrations');
 const sessions           = require('../controllers/sessions');
 const recordsController  = require('../controllers/records');
 
-// router.get('/',(req, res) => res.render('home', {
-//   isHomepage: true
-// }));
+router.get('/',(req, res) => res.render('index', {
+  isHomepage: true
+}));
 
 
 router.route('/register')
@@ -36,7 +36,7 @@ router.route('/records/:id')
 router.route('/records/:id/edit')
   .get(recordsController.edit);
 
-router.route('/pictures/:id/comment')
-  .post(pictures.createComment)
+router.route('/records/:id/comment')
+  .post(recordsController.comment);
 
 module.exports = router;
