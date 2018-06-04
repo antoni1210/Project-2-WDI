@@ -1,0 +1,28 @@
+body {
+  background-image: url("http://performermag.com/wp-content/uploads/2014/11/turntable-wall-inkbluesky.png");
+}
+
+.card {
+  background-color: white;
+
+}
+
+.navbar-item, .title, .content, .subtitle {
+  color: #45ADA8;
+  font-family: 'Sunflower', sans-serif;
+
+}
+
+.label {
+  color: #45ADA8;
+}
+
+.input {
+  background-color: hsl(348, 100%, 61%);
+  width: 500px;
+}
+
+
+h2 {
+  color: #45ADA8;
+}

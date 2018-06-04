@@ -1,0 +1,50 @@
+<h2> Edit <%= record.name %></h2>
+
+<form action="/records/<%= record.id %>" method="post">
+  <input type="hidden" name="_method" value="PUT">
+ <div class="field">
+   <label class="label">Title</label>
+   <div class="control">
+     <input class="input" type="text" name="title" value="<%= record.title %>">
+   </div>
+ </div>
+
+ <div class="field">
+   <label class="label">Artist</label>
+   <div class="control">
+     <input class="input" type="text" name="artist" value="<%= record.artist %>">
+   </div>
+ </div>
+
+ <div class="field">
+   <label class="label">Format</label>
+   <div class="control">
+     <input class="input" type="text" name="format" value="<%= record.format %>">
+   </div>
+ </div>
+
+ <div class="field">
+  <label class="label">Price</label>
+  <div class="control">
+    <input class="input" type="text" name="price" value="<%= record.price %>">
+  </div>
+</div>
+
+ <div class="field">
+   <label class="label">Image</label>
+   <div class="control">
+     <input class="input" type="text" name="image" value="<%= record.image %>">
+   </div>
+ </div>
+
+ <div class="field is-grouped">
+  <div class="control">
+     <button class="button is-link">Submit</button>
+   </div>
+ </div>
+
+   <div class="control">
+     <button class=“button is-text”>Cancel</button>
+   </div>
+ </div>
+</form>
