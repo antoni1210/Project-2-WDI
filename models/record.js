@@ -11,6 +11,7 @@ const recordSchema = new mongoose.Schema({
   format: String,
   price: Number,
   image: String,
+  creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
   comments: [commentSchema]
 }, {
   timestamps: true

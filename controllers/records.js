@@ -82,6 +82,7 @@ function createCommentRoute(req, res){
 
 module.exports = {
   index: indexRoute,
+  // collection: collectionRoute,
   show: showRoute,
   new: newRoute,
   create: createRoute,
