@@ -79,10 +79,19 @@ function createCommentRoute(req, res){
     .then((record) => res.redirect(`/records/${record._id}`));
 }
 
+function collectionRoute(req, res){
+  const recordData = req.body;
+  recordData['creator'] = res.locals.user.id;
+  Record
+    .create(req.body)
+    .then((record)=>{
+      return res.redirect('/records/collection');
+    });
+}
 
 module.exports = {
   index: indexRoute,
-  // collection: collectionRoute,
+  collection: collectionRoute,
   show: showRoute,
   new: newRoute,
   create: createRoute,

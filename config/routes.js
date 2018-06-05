@@ -4,14 +4,10 @@ const static             = require('../controllers/static');
 const registrations      = require('../controllers/registrations');
 const sessions           = require('../controllers/sessions');
 const recordsController  = require('../controllers/records');
-// const collection         = require('../controllers/collection')
 
 router.get('/',(req, res) => res.render('index', {
   isHomepage: true
 }));
-
-// router.route('/collection')
-//   .post(recordsController.create);
 
 router.route('/register')
   .get(registrations.new)
@@ -41,5 +37,11 @@ router.route('/records/:id/edit')
 
 router.route('/records/:id/comment')
   .post(recordsController.comment);
+
+router.route('/users/:id')
+.get(recordsController.show)
+.put(recordsController.update)
+.delete(recordsController.delete);
+
 
 module.exports = router;

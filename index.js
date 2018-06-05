@@ -7,6 +7,7 @@ const session        = require('express-session')
 const app            = express();
 const methodOverride = require('method-override');
 
+
 const routes = require('./config/routes');
 const User = require('./models/user');
 const { port, dbURI } = require('./config/environment');
@@ -16,9 +17,14 @@ mongoose.connect(dbURI);
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
 
+
 app.use(expressLayouts);
 
+
+
 app.use(morgan('dev'));
+
+app.use(express.static(`${__dirname}/public`));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

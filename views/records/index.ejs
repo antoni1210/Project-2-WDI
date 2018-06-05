@@ -5,7 +5,8 @@
     <div class="column is-one-third-desktop is-half-tablet is-multiline">
       <div class="card">
         <div class="card-image">
-          <figure class="image is-4by4">
+
+          <figure class="image is-4by4 is-square">
             <img src="<%= product.image %>" alt="<%= product.name %>">
           </figure>
         </div>
@@ -20,6 +21,26 @@
             <h6 class="subtitle is-5">Artist: <%= product.artist %></h6>
             <h6 class="subtitle is-6">Format: <%= product.format %></h6>
             <h6 class="subtitle is-6">from £<%= product.price %></h6>
+            <form action="./records/collection" method="post">
+                  <button>Add to My Collection</button>
+            </form>
+            <div class="txt-center">
+    <form>
+          <div class="rating">
+              <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
+              <label for="star5" >☆</label>
+              <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
+              <label for="star4" >☆</label>
+              <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
+              <label for="star3" >☆</label>
+              <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
+              <label for="star2" >☆</label>
+              <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
+              <label for="star1" >☆</label>
+              <div class="clear"></div>
+          </div>
+      </form>
+  </div>
           </div>
         </div>
       </div>
