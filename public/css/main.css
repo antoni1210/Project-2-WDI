@@ -1,0 +1,21 @@
+.navbar-item, .title, .content, .subtitle {
+  color: #45ADA8;
+  font-family: 'Sunflower', sans-serif; }
+
+body {
+  background-image: url("http://wallpapers-best.com/uploads/posts/2015-10/1_vinyl.jpg"); }
+
+.title {
+  background-color: black;
+  padding: 2px; }
+
+.column {
+  background-color: black;
+  color: #45ADA8;
+  font-family: 'Sunflower', sans-serif; }
+
+.label, h2 {
+  color: white;
+  font-family: 'Sunflower', sans-serif; }
+
+/*# sourceMappingURL=main.css.map */

@@ -27,6 +27,9 @@ router.route('/records')
 router.route('/records/new')
   .get(recordsController.new);
 
+  router.route('/records/collection')
+    .get(recordsController.collection);
+
 router.route('/records/:id')
   .get(recordsController.show)
   .put(recordsController.update)
@@ -42,6 +45,5 @@ router.route('/users/:id')
 .get(recordsController.show)
 .put(recordsController.update)
 .delete(recordsController.delete);
-
 
 module.exports = router;

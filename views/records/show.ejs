@@ -3,17 +3,28 @@
   <div class="column is-half">
     <img src="<%= record.image %>" alt="<%= record.name %>">
   </div>
-  <div class="column is-half">
+  <div class="column is-half is-size-4">
     <ul>
       <li>Title: <%= record.title %></li>
       <li>Artist: <%= record.artist %></li>
       <li>Format: <%= record.format %></li>
       <li>price <%= record.price %></li>
     </ul>
+  <% if(locals.isLoggedIn){%>
     <a href="/records/<%= record.id %>/edit">Edit</a>
     <form action="/records/<%= record.id %>/" method="post">
       <input type="hidden" name="_method" value="DELETE">
       <button name="button">Delete</button>
     </form>
+  <% } %>
   </div>
 </div>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Vinyl Destination</strong> created by <a href="http://www.antonialston.com/">Antoni Alston</a>
+      </p>
+    </div>
+  </div>
+</footer>
