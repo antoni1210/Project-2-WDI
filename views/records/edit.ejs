@@ -1,5 +1,6 @@
 <h2 class="edit-form-title"> Edit <%= record.name %></h2>
 
+<section class="edit-form-wrapper">
 <form action="/records/<%= record.id %>" method="post" class="edit-form">
   <input type="hidden" name="_method" value="PUT">
  <div class="field">
@@ -48,3 +49,4 @@
    </div>
  </div>
 </form>
+</section>

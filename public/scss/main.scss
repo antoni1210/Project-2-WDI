@@ -1,11 +1,30 @@
-.navbar-item, .title, .content, .subtitle {
+.navbar-item, .title, .content, .subtitle, .column {
   color: #45ADA8;
   font-family: 'Sunflower', sans-serif;
 }
 
-.logo {
+.new-registration-wrapper, .login-form-wrapper, .new-form-wrapper, .login-form,
+.registration-form, .edit-form-wrapper {
+  background-image: url("http://wallpapers-best.com/uploads/posts/2015-10/1_vinyl.jpg");
+}
+
+.edit-form-title, .new-record-title  {
+  padding-left: 50px;
+  font-size: 30px;
+  background-color: black;
+  color: #45ADA8;
   font-family: 'Sunflower', sans-serif;
-  color: white;
+}
+
+.login-form, .registration-form, .edit-form {
+  width: 350px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+}
+
+.label, .user-greeting, .logo {
+  font-family: 'Sunflower', sans-serif;
 }
 
 .title {
@@ -14,7 +33,6 @@
 }
 
 .column {
-  color: #45ADA8;
   font-family: 'Sunflower', sans-serif;
   padding-top: 20px;
 }
@@ -25,66 +43,10 @@
 }
 
 .new-form-wrapper {
-  background-image: url("http://wallpapers-best.com/uploads/posts/2015-10/1_vinyl.jpg");
   padding: 50px 1250px 175px 50px;
-
-}
-
-.new-registration-wrapper {
-  background-image: url("http://wallpapers-best.com/uploads/posts/2015-10/1_vinyl.jpg");
-}
-
-.login-form-wrapper {
-  background-image: url("http://wallpapers-best.com/uploads/posts/2015-10/1_vinyl.jpg");
-}
-.label, h2 {
-  color: white;
-  font-family: 'Sunflower', sans-serif;
-}
-
-.login-form {
-  background-image: url("http://wallpapers-best.com/uploads/posts/2015-10/1_vinyl.jpg");
-  color: white;
-  width: 350px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-}
-.registration-form {
-  background-image: url("http://wallpapers-best.com/uploads/posts/2015-10/1_vinyl.jpg");
-  color: white;
-  width: 350px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-}
-
-.edit-form {
-  background-image: url("http://wallpapers-best.com/uploads/posts/2015-10/1_vinyl.jpg");
-  color: white;
-  width: 500px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-}
-.edit-form-title {
-  padding-left: 50px;
-  font-size: 30px;
-  background-color: black;
-  color: #45ADA8;
-}
-
-.new-record-title {
-  padding-left: 50px;
-  font-size: 30px;
-  background-color: black;
-  color: #45ADA8;
-}
-
-.user-greeting {
-  font-family: 'Sunflower', sans-serif;
 }
 
 .navbar {
-  margin-bottom: 25px;
+  margin-bottom: 12px;
+  font-size: 20px;
 }
