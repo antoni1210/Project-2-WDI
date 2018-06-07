@@ -3,7 +3,7 @@ const morgan         = require('morgan');
 const bodyParser     = require('body-parser');
 const mongoose       = require('mongoose');
 const expressLayouts = require('express-ejs-layouts');
-const session        = require('express-session')
+const session        = require('express-session');
 const app            = express();
 const methodOverride = require('method-override');
 
