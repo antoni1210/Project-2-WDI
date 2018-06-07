@@ -42,8 +42,8 @@ router.route('/records/:id/comment')
   .post(recordsController.comment);
 
 router.route('/users/:id')
-.get(recordsController.show)
-.put(recordsController.update)
-.delete(recordsController.delete);
+  .get(recordsController.show)
+  .put(recordsController.update)
+  .delete(recordsController.delete);
 
 module.exports = router;

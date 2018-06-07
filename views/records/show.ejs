@@ -3,20 +3,21 @@
   <div class="column is-half">
     <img src="<%= record.image %>" alt="<%= record.name %>">
   </div>
-  <div class="column is-half is-size-4">
-    <ul>
-      <li>Title: <%= record.title %></li>
-      <li>Artist: <%= record.artist %></li>
-      <li>Format: <%= record.format %></li>
-      <li>price <%= record.price %></li>
-    </ul>
-  <% if(locals.isLoggedIn){%>
-    <a href="/records/<%= record.id %>/edit">Edit</a>
-    <form action="/records/<%= record.id %>/" method="post">
-      <input type="hidden" name="_method" value="DELETE">
-      <button name="button">Delete</button>
-    </form>
-  <% } %>
+    <div class="column is-size-4">
+      <ul>
+        <li>Title: <%= record.title %></li>
+        <li>Artist: <%= record.artist %></li>
+        <li>Format: <%= record.format %></li>
+        <li>price: £<%= record.price %></li>
+      </ul>
+      <% if(locals.isLoggedIn){%>
+        <a href="/records/<%= record.id %>/edit">Edit</a>
+        <form action="/records/<%= record.id %>/" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <button name="button">Delete</button>
+        </form>
+      <% } %>
+    </div>
   </div>
 </div>
 <footer class="footer">

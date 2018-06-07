@@ -1,14 +1,40 @@
 <% if(locals.message) { %>
   <p><%= message %></p>
 <% } %>
-<form method="POST" action="/login">
-  <div>
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email">
+
+<section class="login-form-wrapper">
+  <form method="POST" action="/login" class="login-form">
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="email" name="email" id="email" placeholder="Email">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="password" name="password" id="password" placeholder="Password">
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <button class="button is-success">
+          Login
+        </button>
+      </p>
+    </div>
+  </form>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Vinyl Destination</strong> created by <a href="http://www.antonialston.com/">Antoni Alston</a>
+      </p>
+    </div>
   </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password">
-  </div>
-  <button class="button">Login</button>
-</form>
+</footer>
