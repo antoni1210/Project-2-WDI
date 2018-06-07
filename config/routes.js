@@ -5,7 +5,7 @@ const registrations      = require('../controllers/registrations');
 const sessions           = require('../controllers/sessions');
 const recordsController  = require('../controllers/records');
 
-router.get('/',(req, res) => res.render('index', {
+router.get('/',(req, res) => res.render('/index', {
   isHomepage: true
 }));
 
