@@ -16,7 +16,7 @@ The application should:
 - Use SCSS as opposed to CSS.
 - Be deployed online so that it can be accessed publicly.
 
-[**Heroku**](xxx)
+[**Heroku**](https://project-2-wdi-antoni-alston.herokuapp.com/)
 [**GitHub Repo**](https://github.com/antoni1210/Project-2-WDI)
 
 ---
@@ -33,7 +33,6 @@ The application should:
 - body-parser
 - Express
 - Mongoose
-- Filepicker
 - Git
 - GitHub
 - Heroku
@@ -45,38 +44,36 @@ The application should:
 
 Landing page:
 
-<img width="1383" alt="Landing page" src="https://i.imgur.com/pCqQUKR.png">
+<img width="1383" alt="Landing page" src="https://i.imgur.com/AiGKUIZ.png">
 
 Homepage:
 
-<img width="1217" alt="Homepage" src="https://i.imgur.com/EerEk2N.png">
+<img width="1217" alt="Homepage" src="https://i.imgur.com/pbLtBj9.png">
 
 Registration page:
-<img width="1217" alt="Registration page" src="https://i.imgur.com/v3CDaxD.png">
+<img width="1217" alt="Registration page" src="https://i.imgur.com/guMtD00.png">
 
 Login page:
-<img width="1378" alt="Login page" src="https://i.imgur.com/cYsV1y2.png">
+<img width="1378" alt="Login page" src="https://i.imgur.com/6IAHKe4.png">
 
 Listing page:
-<img width="1218" alt="Listing" src="https://i.imgur.com/qxVqBi7.png">
-<img width="1218" alt="Listing" src="https://i.imgur.com/lBjaRZW.png">
+<img width="1218" alt="Listing" src="https://i.imgur.com/wBoByUP.png">
 
 
 ---
 
 ### Challenges and issues
 
-- Being able to return the data we wanted from Ticketmaster's API and manipulate it in the way that we desired was trickier than expected.
-- We initially got a little overwhelmed in terms of how heavily we might rely on the API's we used.
-- A few merging issues set us back a little at times, but we were able to rectify these.
+- This was my first time using a css framework (Bulma), so it took a little getting used to.
+- I tried implementing a commenting feature that I couldn't get it to work.
 
 ### Wins
 
-- Despite a few merge hiccups, working as a team using Trello was very smooth.
-- Eventually getting some of the data we wanted from Ticketmaster's API was a joyous occasion.
+- The column-based layout looked pretty neat once I got to know Bulma.
+- Getting authentication working for the first time was cool.
 
 ### Future developments and tweaks
 
-- Being able to auto-populate a new ticket listing with predetermined data from Ticketmaster's API rather than the user having to input each field.
-- Some of the colours used in the styling are a bit garish.
-- Address some of the clunky UX.
+- Re-visit the commenting feature so that users can comment on each others records.
+- Adjust some of the styling to address some contrast issues, i.e. on the forms where some of the text washes into the background image.
+- Enable users to exchange records with each other.
