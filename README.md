@@ -45,21 +45,20 @@ The application should:
 
 Landing page:
 
-<img width="1383" alt="Landing page" src="https://i.imgur.com/pCqQUKR.png">
+<img width="1383" alt="Landing page" src="https://i.imgur.com/AiGKUIZ.png">
 
 Homepage:
 
-<img width="1217" alt="Homepage" src="https://i.imgur.com/EerEk2N.png">
+<img width="1217" alt="Homepage" src="https://i.imgur.com/pbLtBj9.png">
 
 Registration page:
-<img width="1217" alt="Registration page" src="https://i.imgur.com/v3CDaxD.png">
+<img width="1217" alt="Registration page" src="https://i.imgur.com/guMtD00.png">
 
 Login page:
-<img width="1378" alt="Login page" src="https://i.imgur.com/cYsV1y2.png">
+<img width="1378" alt="Login page" src="https://i.imgur.com/6IAHKe4.png">
 
 Listing page:
-<img width="1218" alt="Listing" src="https://i.imgur.com/qxVqBi7.png">
-<img width="1218" alt="Listing" src="https://i.imgur.com/lBjaRZW.png">
+<img width="1218" alt="Listing" src="https://i.imgur.com/wBoByUP.png">
 
 
 ---
