@@ -26,7 +26,7 @@ The application should:
 - HTML5
 - SCSS
 - JavaScript (ES6)
-- React
+- EJS
 - Node.js
 - Bcrypt
 - Bluebird
